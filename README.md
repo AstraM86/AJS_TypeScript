@@ -1,5 +1,7 @@
 # Домашнее задание к лекции «TypeScript»
 
+[![Build status](https://ci.appveyor.com/api/projects/status/16enak8xl5n4kdjh?svg=true)](https://ci.appveyor.com/project/AstraM86/ajs-typescript)
+
 **Важно**: все задачи допустимо выполнять в одном GitHub репозитории.
 
 **Важно**: тесты должны обеспечивать 100% покрытие тестируемых функций по строкам.
