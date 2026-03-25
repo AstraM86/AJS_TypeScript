@@ -1,44 +1,46 @@
 {
  "name": "ajs_typescript",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack serve --mode development",
-    "build": "tsc",
-    "watch": "tsc -w",
-    "test": "jest",
-    "coverage": "jest --coverage",
-    "lint": "eslint src"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AstraM86/AJS_TypeScript.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AstraM86/AJS_TypeScript/issues"
-  },
-  "homepage": "https://github.com/AstraM86/AJS_TypeScript#readme",
-  "devDependencies": {
-    "@babel/core": "^7.29.0",
-    "@babel/preset-env": "^7.29.0",
-    "@types/jest": "^30.0.0",
-    "babel-jest": "^30.2.0",
-    "babel-loader": "^9.2.1",
-    "cross-env": "^10.1.0",
-    "eslint": "^8.57.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.32.0",
-    "html-webpack-plugin": "^5.6.6",
-    "jest": "^30.3.0",
-    "ts-jest": "^29.4.6",
-    "ts-loader": "^9.5.4",
-    "typescript": "^5.9.3",
-    "webpack": "^5.105.2",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.3"
-  }
+ "version": "1.0.0",
+ "description": "",
+ "main": "index.js",
+ "scripts": {
+  "start": "webpack serve --mode development",
+  "build": "tsc",
+  "watch": "tsc -w",
+  "test": "jest",
+  "coverage": "jest --coverage",
+  "lint": "eslint src --ext .ts,.tsx"
+ },
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/AstraM86/AJS_TypeScript.git"
+ },
+ "keywords": [],
+ "author": "",
+ "license": "ISC",
+ "bugs": {
+  "url": "https://github.com/AstraM86/AJS_TypeScript/issues"
+ },
+ "homepage": "https://github.com/AstraM86/AJS_TypeScript#readme",
+ "devDependencies": {
+  "@babel/core": "^7.29.0",
+  "@babel/preset-env": "^7.29.0",
+  "@types/jest": "^30.0.0",
+  "@typescript-eslint/eslint-plugin": "^8.57.2",
+  "@typescript-eslint/parser": "^8.57.2",
+  "babel-jest": "^30.2.0",
+  "babel-loader": "^9.2.1",
+  "cross-env": "^10.1.0",
+  "eslint": "^8.57.1",
+  "eslint-config-airbnb-base": "^15.0.0",
+  "eslint-plugin-import": "^2.32.0",
+  "html-webpack-plugin": "^5.6.6",
+  "jest": "^30.3.0",
+  "ts-jest": "^29.4.6",
+  "ts-loader": "^9.5.4",
+  "typescript": "^5.9.3",
+  "webpack": "^5.105.2",
+  "webpack-cli": "^6.0.1",
+  "webpack-dev-server": "^5.2.3"
+ }
 }

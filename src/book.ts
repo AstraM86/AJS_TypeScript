@@ -7,6 +7,6 @@ export class Book implements Product {
     public id: number,
     public name: string,
     public author: string,
-    public price: number
+    public price: number,
   ) {}
 }

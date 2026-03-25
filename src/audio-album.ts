@@ -7,6 +7,6 @@ export class AudioAlbum implements Product {
     public id: number,
     public name: string,
     public artist: string,
-    public price: number
+    public price: number,
   ) {}
 }

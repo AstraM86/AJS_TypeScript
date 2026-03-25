@@ -9,6 +9,6 @@ export class Movie implements Product {
     public director: string,
     public year: number,
     public genre: string,
-    public price: number
+    public price: number,
   ) {}
 }

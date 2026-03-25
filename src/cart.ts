@@ -13,24 +13,22 @@ export class Cart {
       throw new Error('Количество должно быть положительным');
     }
 
-    const existingIndex = this.items.findIndex(item => item.product.id === product.id);
+    const existingIndex = this.items.findIndex((item) => item.product.id === product.id);
 
     if (product.isUnique) {
       if (existingIndex !== -1) {
         return;
       }
       this.items.push({ product, quantity: 1 });
+    } else if (existingIndex !== -1) {
+      this.items[existingIndex].quantity += quantity;
     } else {
-      if (existingIndex !== -1) {
-        this.items[existingIndex].quantity += quantity;
-      } else {
-        this.items.push({ product, quantity });
-      }
+      this.items.push({ product, quantity });
     }
   }
 
   remove(productId: number): void {
-    const index = this.items.findIndex(item => item.product.id === productId);
+    const index = this.items.findIndex((item) => item.product.id === productId);
     if (index === -1) {
       throw new Error(`Товар с id ${productId} не найден`);
     }
@@ -42,7 +40,7 @@ export class Cart {
       throw new Error('Количество для уменьшения должно быть положительным');
     }
 
-    const index = this.items.findIndex(item => item.product.id === productId);
+    const index = this.items.findIndex((item) => item.product.id === productId);
     if (index === -1) {
       throw new Error(`Товар с id ${productId} не найден`);
     }
@@ -50,12 +48,10 @@ export class Cart {
     const item = this.items[index];
     if (item.product.isUnique) {
       this.remove(productId);
+    } else if (amount >= item.quantity) {
+      this.remove(productId);
     } else {
-      if (amount >= item.quantity) {
-        this.remove(productId);
-      } else {
-        item.quantity -= amount;
-      }
+      item.quantity -= amount;
     }
   }
 
@@ -66,7 +62,7 @@ export class Cart {
   getTotalPrice(): number {
     return this.items.reduce(
       (total, { product, quantity }) => total + product.price * quantity,
-      0
+      0,
     );
   }
 
